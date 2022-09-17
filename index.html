@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Primary Meta Tags -->
+    <title>Satyendra Maurya</title>
+    <meta name="title" content="Satyendra maurya">
+    <meta name="description" content="Hi! I am Satyendra Maurya. Connect with me at yoursatyendra.github.io">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- set theme -->
+    <script>
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        const localTheme = localStorage.getItem('theme')
+        if (!localTheme) {
+            localStorage.setItem('theme', systemTheme)
+            document.documentElement.classList.add(systemTheme)
+        }
+        if (localTheme === 'dark') {
+            document.documentElement.classList.add(localTheme)
+        }
+    </script>
+
+    <link rel="stylesheet" href="assets/style.css"></link>
+</head>
+
+<body class="bg-slate-50 dark:bg-gradient-to-br dark:from-slate-900 dark:to-black dark:text-slate-50 min-h-screen">
+    <header class="relative pt-20 pb-10 px-2 max-w-2xl mx-auto">
+        <div class="absolute right-2 top-2">
+            <button id="theme-toggle" onclick="toggleTheme()" class="hover p-2 rounded-full transition-all dark:text-slate-400 text-slate-700 opacity-80 hover:opacity-100">
+                <svg viewBox="0 0 256 256" class="w-6" astro-icon="ph:sun-horizon"><path fill="currentColor" d="M77.7 43.6a8.1 8.1 0 0 1 4.4-10.5 7.9 7.9 0 0 1 10.4 4.4l7.7 18.4a8.1 8.1 0 0 1-4.3 10.5 8.5 8.5 0 0 1-3.1.6 8.2 8.2 0 0 1-7.4-4.9zm-56.2 64.9 18.4 7.7a8.5 8.5 0 0 0 3.1.6 8 8 0 0 0 3.1-15.4l-18.5-7.7a8.1 8.1 0 0 0-10.5 4.4 7.9 7.9 0 0 0 4.4 10.4zm191.5 8.3a8.5 8.5 0 0 0 3.1-.6l18.4-7.7a7.9 7.9 0 0 0 4.4-10.4 8.1 8.1 0 0 0-10.5-4.4l-18.5 7.7a8 8 0 0 0 3.1 15.4zm-52.9-50.4a8.5 8.5 0 0 0 3.1.6 8.2 8.2 0 0 0 7.4-4.9l7.7-18.5a8.1 8.1 0 0 0-4.4-10.5 7.9 7.9 0 0 0-10.4 4.4l-7.7 18.4a8.1 8.1 0 0 0 4.3 10.5zM248 160a8 8 0 0 1-8 8H16a8 8 0 0 1 0-16h44.5a70.1 70.1 0 0 1-.5-8 68 68 0 0 1 136 0 70.1 70.1 0 0 1-.5 8H240a8 8 0 0 1 8 8zm-171.4-8h102.8a52.9 52.9 0 0 0 .6-8 52 52 0 0 0-104 0 52.9 52.9 0 0 0 .6 8zM208 192H48a8 8 0 0 0 0 16h160a8 8 0 0 0 0-16z"/></svg>
+
+              </button>
+        </div>
+        <div class="text-center">
+            <h1 class="text-2xl font-bold">Satyendra Maurya</h1>
+            <p class=" text-slate-800 dark:text-slate-200">Frontend Developer</p>
+        </div>
+    </header>
+
+    <header id="fixed-header" class="fixed hidden w-full top-0 left-0 bg-slate-50 dark:bg-slate-900 bg-opacity-90 backdrop-blur-md border-b dark:border-slate-800">
+        <div class="max-w-2xl mx-auto py-1 px-3 flex justify-between items-center">
+            <h1 class="font-semibold">Satyendra Maurya</h1>
+
+            <button id="theme-toggle" onclick="toggleTheme()" class="hover p-2 rounded-full transition-all dark:text-slate-400 text-slate-700 opacity-80 hover:opacity-100">
+                    <svg viewBox="0 0 256 256" class="w-6" astro-icon="ph:sun-horizon"><path fill="currentColor" d="M77.7 43.6a8.1 8.1 0 0 1 4.4-10.5 7.9 7.9 0 0 1 10.4 4.4l7.7 18.4a8.1 8.1 0 0 1-4.3 10.5 8.5 8.5 0 0 1-3.1.6 8.2 8.2 0 0 1-7.4-4.9zm-56.2 64.9 18.4 7.7a8.5 8.5 0 0 0 3.1.6 8 8 0 0 0 3.1-15.4l-18.5-7.7a8.1 8.1 0 0 0-10.5 4.4 7.9 7.9 0 0 0 4.4 10.4zm191.5 8.3a8.5 8.5 0 0 0 3.1-.6l18.4-7.7a7.9 7.9 0 0 0 4.4-10.4 8.1 8.1 0 0 0-10.5-4.4l-18.5 7.7a8 8 0 0 0 3.1 15.4zm-52.9-50.4a8.5 8.5 0 0 0 3.1.6 8.2 8.2 0 0 0 7.4-4.9l7.7-18.5a8.1 8.1 0 0 0-4.4-10.5 7.9 7.9 0 0 0-10.4 4.4l-7.7 18.4a8.1 8.1 0 0 0 4.3 10.5zM248 160a8 8 0 0 1-8 8H16a8 8 0 0 1 0-16h44.5a70.1 70.1 0 0 1-.5-8 68 68 0 0 1 136 0 70.1 70.1 0 0 1-.5 8H240a8 8 0 0 1 8 8zm-171.4-8h102.8a52.9 52.9 0 0 0 .6-8 52 52 0 0 0-104 0 52.9 52.9 0 0 0 .6 8zM208 192H48a8 8 0 0 0 0 16h160a8 8 0 0 0 0-16z"/></svg>
+
+                  </button>
+        </div>
+    </header>
+    <div id="swup" class="max-w-2xl mx-auto p-3">
+        <div aria-label="About me" class="space-y-12 mt-12">
+            <section>
+                <h2>Links</h2>
+                <div class="mt-4 md:mt-0">
+                    <div class="flex gap-4 flex-wrap text-sm">
+
+                        <div class="flex gap-4">
+                            <a target="_blank" class="clean button whitespace-nowrap flex gap-2 px-3 py-2 rounded-xl items-center" href="https://github.com/jordienr">
+							<svg viewBox="0 0 16 16" class="w-5" astro-icon="bi:github"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+
+							GitHub
+						</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <a target="_blank" class="clean button whitespace-nowrap flex gap-2 px-3 py-2 rounded-xl items-center" href="https://twitter.com/jordienr">
+							<svg viewBox="0 0 16 16" class="w-5" astro-icon="bi:twitter"><path fill="currentColor" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/></svg>
+
+							Twitter
+						</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <a target="_blank" class="clean button whitespace-nowrap flex gap-2 px-3 py-2 rounded-xl items-center" href="https://dev.to/jordienr">
+							<svg viewBox="0 0 24 24" class="w-5" astro-icon="bx:bxl-dev-to"><path fill="currentColor" d="M7.826 10.083a.784.784 0 0 0-.468-.175h-.701v4.198h.701a.786.786 0 0 0 .469-.175c.155-.117.233-.292.233-.525v-2.798c.001-.233-.079-.408-.234-.525zM19.236 3H4.764C3.791 3 3.002 3.787 3 4.76v14.48c.002.973.791 1.76 1.764 1.76h14.473c.973 0 1.762-.787 1.764-1.76V4.76A1.765 1.765 0 0 0 19.236 3zM9.195 13.414c0 .755-.466 1.901-1.942 1.898H5.389V8.665h1.903c1.424 0 1.902 1.144 1.903 1.899v2.85zm4.045-3.562H11.1v1.544h1.309v1.188H11.1v1.543h2.142v1.188h-2.498a.813.813 0 0 1-.833-.792V9.497a.813.813 0 0 1 .792-.832h2.539l-.002 1.187zm4.165 4.632c-.531 1.235-1.481.99-1.906 0l-1.548-5.818h1.309l1.193 4.569 1.188-4.569h1.31l-1.546 5.818z"/></svg>
+
+							Dev.to
+						</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <a target="_blank" class="clean button whitespace-nowrap flex gap-2 px-3 py-2 rounded-xl items-center" href="https://www.linkedin.com/in/jordienric/">
+							<svg viewBox="0 0 16 16" class="w-5" astro-icon="bi:linkedin"><path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+
+							LinkedIn
+						</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <a target="_blank" class="clean button whitespace-nowrap flex gap-2 px-3 py-2 rounded-xl items-center" href="https://jordienr.notion.site/jordienr/Jordi-Enric-UI-Portfolio-ac3517bcd82544289caf07c4603bddfd">
+							<svg viewBox="0 0 15 15" class="w-5" astro-icon="radix-icons:notion-logo"><path fill="currentColor" d="M3.258 3.117c.42.341.577.315 1.366.262l7.433-.446c.158 0 .027-.157-.026-.183l-1.235-.893c-.236-.184-.551-.394-1.155-.341l-7.198.525c-.262.026-.315.157-.21.262l1.025.814zm.446 1.732v7.821c0 .42.21.578.683.552l8.17-.473c.472-.026.525-.315.525-.656V4.324c0-.34-.131-.525-.42-.499l-8.538.499c-.315.026-.42.184-.42.525zm8.065.42c.052.236 0 .472-.237.499l-.394.078v5.774c-.341.184-.657.29-.92.29-.42 0-.525-.132-.84-.526L6.803 7.342v3.911l.815.184s0 .472-.657.472l-1.812.105c-.053-.105 0-.367.184-.42l.472-.13V6.292L5.15 6.24c-.053-.236.078-.577.446-.604l1.944-.13L10.22 9.6V5.978l-.683-.079c-.053-.289.157-.499.42-.525l1.813-.105zm-9.93-3.937L9.326.781c.919-.08 1.155-.026 1.733.394l2.39 1.68c.395.288.526.367.526.682v9.212c0 .578-.21.92-.946.971l-8.694.525c-.552.027-.815-.052-1.104-.42l-1.76-2.283c-.315-.42-.446-.735-.446-1.103V2.25c0-.472.21-.866.814-.918z"/></svg>
+
+							Blogs
+						</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <h2 class="">About</h2>
+                <div class="">
+                    <p>I'm a self-taught full stack development(FSD) with a heavy focus on frontend Developer. My preferred stack is TypeScript, React & Node.</p>
+                    <p>Currently, I'm building a Blogger REST API to help Node JS, Express & Mongo DB at <a href="https://Blogger.com/">Blogger.com</a>.</p>
+                    <p> I done my Bachelor's Degree in Computer Application from Ranvir Ranjya Post Graduate College, graduated in 2022 and pursuing my Master's Degree in Computer Application (MCA) from NIT Kurukshetra.</p>
+                    <p>I have a great interest in design systems, web accessibility, frontend architecture & design patterns.</p>
+                    <p>To reach me, please use <a href="https://linkedin.com/">linkedin</a> or <a href="https://Instagram.com/">Instagram</a></p>
+                </div>
+            </section>
+            <section>
+                <h2>Work</h2>
+                <div>
+                    <p>Currently I'm Working a E-commerce platform as Freelancing Project. @ <a href="https://circleskincare.com/">CircleSkinCare</a></p>
+                    <p>Previously, I have worked as a full stack development(FSD) Intern @ <a href="https://www.caarya.com/">Caarya</a></p>
+                </div>
+            </section>
+             <section>
+                <h2>Tech Stack / Skills</h2>
+                <div>
+                    <p><b>Web development: </b>HTML, CSS, Javascript, Reactjs, CSS frameworks, Bootstrap, Nodejs, Reactstrap, Vuejs, Firebase, SQL, React Hooks</p>
+                    <p><b>User Experience and Wireframing Design Tools:</b> Figma, Adobe Photoshop, Adobe Illustrator, Canva</br>
+                    <p><b> General Programming Languages:</b> C, JAVA, C++, Git</p>
+                    <p><b>Cloud :</b> Google Cloud Platform</p>
+                    <p><b> Soft Skills: </b> Communicational and Organizational skills, Adaptability, Teamwork, Creativity.</p>
+                </div>
+            </section>
+            <section>
+                <h2>Other</h2>
+                <div>
+                    <p>Published in <a href="https://github.com">Some of my Finest Work</a></p>
+                </div>
+            </section>
+            <section>
+                <h2>Recent Projects</h2>
+                <div class="flex flex-col gap-4">
+                    <img src="img/p1.jpg" alt="A blog Portfolio Website">
+                     <div class="py-2">
+                        <h3>A blog Portfolio Website</h3>
+                    </div>
+                    <img src="img/p2.jpg" alt="My College Official Website">
+                    <div class="py-2">
+                        <h3>College Official Website</h3>
+                    </div>
+                    <img src="img/p3.jpg" alt="College Event Website">
+                    <div class="py-2">
+                        <h3>College Event Website</h3>
+                    </div>
+                </div>
+            </section>
+             <section>
+                <h2>Sold yet?</h2>
+                <div>
+                    <p>Thanks for stopping by, I’m currently looking to join a new team of creative designers and developers. If you think we might be a good fit for one another, please do connect with me online...<a href="#">Linkeden</a> or <a href="#">Email</a></p>
+                </div>
+            </section>
+
+           
+        </div>
+        <footer class="max-w-2xl mx-auto px-4 mt-24 border-gray-800 pt-12 pb-16 flex justify-between">
+            <div class="flex gap-2 items-start">
+
+                <div class="flex flex-col text-slate-500 dark:text-slate-600">
+                    <p class="font-serif italic">
+                        Made with ❤️ by Satyendra Maurya</p>
+                    <p id="time" class="-mt-4"></p>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    <script type="module" src="data:application/javascript;base64,aW1wb3J0IFN3dXAgZnJvbSAnc3d1cCcKaW1wb3J0IFN3dXBBMTF5UGx1Z2luIGZyb20gJ0Bzd3VwL2ExMXktcGx1Z2luJwppbXBvcnQgU3d1cEhlYWRQbHVnaW4gZnJvbSAnQHN3dXAvaGVhZC1wbHVnaW4nCmltcG9ydCBTd3VwU2xpZGVUaGVtZSBmcm9tICdAc3d1cC9zbGlkZS10aGVtZScKCmNvbnN0IHN3dXAgPSBuZXcgU3d1cCh7CiAgICBwbHVnaW5zOiBbbmV3IFN3dXBBMTF5UGx1Z2luKCksIG5ldyBTd3VwSGVhZFBsdWdpbigpLCBuZXcgU3d1cFNsaWRlVGhlbWUoKV0sCn0pCg=="></script>
+    <!-- Image thing -->
+    <script>
+        // Images
+
+        const imgs = document.querySelectorAll('img');
+        imgs.forEach(img => {
+            img.addEventListener('load', () => {
+                img.classList.add('loaded');
+            });
+            img.addEventListener('click', () => {
+                img.classList.toggle('fullscreen')
+                document.body.toggle('overflow-hidden')
+            });
+        })
+
+
+        // -----------------
+
+        
+        // Show header on scroll
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('fixed-header')
+            if (window.scrollY > 173) {
+                header.classList.remove('hidden')
+            } else {
+                header.classList.add('hidden')
+            }
+        })
+
+
+        // -----------------
+
+        // Change theme
+
+        function toggleTheme() {
+            const button = document.querySelector('#theme-toggle')
+            button.classList.toggle('theme-dark')
+
+            const currentTheme = localStorage.getItem('theme')
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+
+            localStorage.setItem('theme', newTheme)
+
+            if (newTheme === 'dark') {
+                document.documentElement.classList.add('dark')
+            } else {
+                document.documentElement.classList.remove('dark')
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<!------------------------------------------------
+
+Satyendra Maurya please connect With linkedin or instagram.
+
+------------------------------------------------>
